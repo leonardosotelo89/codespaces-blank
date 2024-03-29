@@ -76,12 +76,10 @@ const title = document.createElement('h2')
 title.innerHTML = 'saludo' 
 container.appendChild(title)
 const formarquee = document.getElementById('formarquee') 
-  function createmarquee() {
 const marquee = document.createElement('marquee')
 marquee.innerHTML = "hola, soy leonardosotelo89 de chile"
 formarquee.appendChild( marquee)
- } 
-createmarquee() 
+
  
 function randomelement(){
   let random = parseInt(Math.random()*customs.length)
@@ -91,9 +89,11 @@ function randomelement(){
 function setmarquee(){
   let current = randomelement()
   title.innerHTML = customs[current].name
+  marquee.remove()
   formarquee.removeChild(formarquee.lastChild)
-  createmarquee()
-  marquee.innerHTML = customs[current].text ;
+  const dynamicmarquee = document.createElement('marquee') 
+  dynamicmarquee.innerHTML = customs[current].text ;
+  formarquee.appendChild(dynamicmarquee) 
 }
 document.onclick = setmarquee
 
