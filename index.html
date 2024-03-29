@@ -39,7 +39,7 @@ content="width=device-width,
     <div id="container">
    <marquee>leonardosotelo89@gmail.com</marquee> 
 <div id="div1">leonardosotelo89</div>
-
+<formarquee id="formarquee"></formarquee>
     </div>
   </body>
 <script>
@@ -75,10 +75,14 @@ const container = document.getElementById('container')
 const title = document.createElement('h2')
 title.innerHTML = 'saludo' 
 container.appendChild(title)
+const formarquee = document.getElementById('formarquee') 
+  function createmarquee() {
 const marquee = document.createElement('marquee')
 marquee.innerHTML = "hola, soy leonardosotelo89 de chile"
-container.appendChild( marquee)
-
+formarquee.appendChild( marquee)
+ } 
+createmarquee() 
+ 
 function randomelement(){
   let random = parseInt(Math.random()*customs.length)
   return random
@@ -87,6 +91,8 @@ function randomelement(){
 function setmarquee(){
   let current = randomelement()
   title.innerHTML = customs[current].name
+  formarquee.removeChild(formarquee.lastChild)
+  createmarquee()
   marquee.innerHTML = customs[current].text ;
 }
 document.onclick = setmarquee
