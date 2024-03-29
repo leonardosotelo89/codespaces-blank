@@ -44,19 +44,30 @@ content="width=device-width,
 <script>
 //custom property to each index
 const customs = []
-customs[0] = "Oats"
-customs[0].text = "Oats: Rich in fiber, oats can help lower cholesterol levels and promote digestive health."
-customs[1] = "Quinoa"
-customs[1].text = "Quinoa: High in protein and containing essential amino acids, quinoa is a great option for vegetarians and vegans."
-customs[2] = "Wheat"
-customs[2].text = "Wheat: A good source of carbohydrates, wheat provides energy for the body and is often fortified with essential nutrients like iron and B vitamins."
-customs[3] = "Barley"
-customs[3].text = "Barley: Packed with fiber and antioxidants, barley can aid in weight management and support heart health."
-customs[4] = "Brown rice"
-customs[4].text = "Brown rice: Unlike white rice, brown rice retains its bran and germ layers, providing fiber, vitamins, and minerals like magnesium and selenium."
-customs[5] = "Millet"
-customs[5].text = "Millet: Gluten-free and rich in nutrients like magnesium and phosphorus, millet is known for its digestive health benefits and ability to regulate blood sugar levels."
-
+customs[0] = {
+  name:"Oats", 
+  text : "Oats: Rich in fiber, oats can help lower cholesterol levels and promote digestive health."
+   }, 
+customs[1] = {
+  name:"Quinoa", 
+  text: "Quinoa: High in protein and containing essential amino acids, quinoa is a great option for vegetarians and vegans."
+   } 
+customs[2] = {
+  name:"Wheat", 
+  text:"Wheat: A good source of carbohydrates, wheat provides energy for the body and is often fortified with essential nutrients like iron and B vitamins."
+   } 
+customs[3] = {
+  name:"Barley", 
+  text:"Barley: Packed with fiber and antioxidants, barley can aid in weight management and support heart health."
+   } 
+customs[4] = {
+  name"Brown rice", 
+  text: "Brown rice: Unlike white rice, brown rice retains its bran and germ layers, providing fiber, vitamins, and minerals like magnesium and selenium."
+ } 
+customs[5] = {
+  name:"Millet", 
+  text: "Millet: Gluten-free and rich in nutrients like magnesium and phosphorus, millet is known for its digestive health benefits and ability to regulate blood sugar levels."
+ } 
 
 const title = document.createElement('h2')
 title.innerHTML = 'saludo' 
@@ -72,9 +83,8 @@ function randomelement(){
 //console.log(randomelement()) 
 function setmarquee(){
   let current = randomelement()
-  title.innerHTML = customs[current] ;
+  title.innerHTML = customs[current].name
   marquee.innerHTML = customs[current].text ;
-  console.log("current", current,"current.text", current.text,"customs[current]" , customs[current], "customs[current].text", customs[current].text) 
 }
 document.onclick = setmarquee
 </script>
