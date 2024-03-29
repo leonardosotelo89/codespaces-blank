@@ -39,8 +39,11 @@ content="width=device-width,
     <div id="container">
    <marquee>leonardosotelo89@gmail.com</marquee> 
 <div id="div1">leonardosotelo89</div>
+      
 <formarquee id="formarquee"></formarquee>
+      
     </div>
+    
   </body>
 <script>
 //custom property to each index
@@ -74,11 +77,11 @@ customs[5] = {
 const container = document.getElementById('container') 
 const title = document.createElement('h2')
 title.innerHTML = 'saludo' 
-container.appendChild(title)
+formarquee.appendChild(title)
 const formarquee = document.getElementById('formarquee') 
 const marquee = document.createElement('marquee')
 marquee.innerHTML = "hola, soy leonardosotelo89 de chile"
-formarquee.appendChild( marquee)
+formarquee.appendChild(marquee)
 
  
 function randomelement(){
@@ -88,9 +91,14 @@ function randomelement(){
 //console.log(randomelement()) 
 function setmarquee(){
   let current = randomelement()
-  title.innerHTML = customs[current].name
+  title.remove
   marquee.remove()
   formarquee.innerHTML = "" 
+  
+  const dynamictitle = document.createElement('h2') 
+  title.innerHTML = customs[current].name
+  formarquee.appendChild(dynamictitle) 
+  
   const dynamicmarquee = document.createElement('marquee') 
   dynamicmarquee.innerHTML = customs[current].text ;
   formarquee.appendChild(dynamicmarquee) 
