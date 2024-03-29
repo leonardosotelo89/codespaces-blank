@@ -16,12 +16,12 @@ content="width=device-width,
 } 
 #container{
     width: 90%;
-    height: 100%;
+    height: 90%;
     margin-top: 20px;
     background-color: black;
+    overflow:hidden ;
 }
 #div1{
-    width: 350px;
     animation: todiv1 20s 5s linear infinite;
     background-color: maroon;
     text-align: center;
@@ -85,6 +85,7 @@ function randomelement(){
 //console.log(randomelement()) 
 function setmarquee(){
   let current = randomelement()
+  marquee.innerHTML = "" 
   title.innerHTML = customs[current].name
   marquee.innerHTML = customs[current].text ;
 }
