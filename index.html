@@ -1,0 +1,54 @@
+<html>
+  <head>
+<meta name="viewport" 
+content="width=device-width,
+                  height=device-height, 
+                  initial-scale=1.0">
+    <title></title>
+    <style>
+*{margin:0px;padding:0px;}
+    body{background-color: rgb(0,0,0);
+               color: lime;
+} 
+    #links{
+      display:none;
+     } 
+    #close{
+      position:absolute ;
+      top:0px;
+      right:0px;
+      background-color:red;
+      color:black ;
+      font-weight:bold ;
+     } 
+    </style>
+  </head>
+  <body>
+    <h2 id="projects">projects</h2>
+    <div id="links" >
+      <close id="close">x</close>
+      <a src="dynamicmarquee.html>dynamic marquee</a>
+    </div>
+<marquee>for test codes</marquee>
+
+
+    
+
+  </body>
+<script>
+const projects = document.getElementById('projects') 
+const links = document.getElementById('links') 
+const close = document.getElementById('close') 
+
+projects.onclick = function() {
+links.style.display = 'block'       
+} 
+close.onclick = function() {
+links.style.display = 'none' 
+} 
+
+
+        
+</script>
+<footer>                        <!--              --></footer>
+</html>
