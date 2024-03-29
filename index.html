@@ -90,7 +90,7 @@ function setmarquee(){
   let current = randomelement()
   title.innerHTML = customs[current].name
   marquee.remove()
-  formarquee.removeChild(formarquee.lastChild)
+  formarquee.innerHTML = "" 
   const dynamicmarquee = document.createElement('marquee') 
   dynamicmarquee.innerHTML = customs[current].text ;
   formarquee.appendChild(dynamicmarquee) 
