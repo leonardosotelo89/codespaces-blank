@@ -35,6 +35,7 @@ content="width=device-width,
     </style>
   </head>
   <body>
+<h3></h3>
     <div id="container">
    <marquee>leonardosotelo89@gmail.com</marquee> 
 <div id="div1">leonardosotelo89</div>
@@ -91,11 +92,12 @@ function setmarquee(){
 }
 document.onclick = setmarquee
 
-
+const h3 = document.querySelector('h3') 
 setInterval(()=>{
   console.log("scrollWidth", marquee.scrollWidth) 
   console.log("scrollLeft", marquee.scrollLeft) 
   console.log("clientWidth", marquee.clientWidth
+h3.innerHTML = marquee.scrollWidth 
 </script>
 <footer>                        <!--              --></footer>
 </html> 
