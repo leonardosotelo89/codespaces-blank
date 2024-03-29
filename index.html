@@ -16,7 +16,7 @@ content="width=device-width,
 } 
 #container{
     width: 90%;
-    height: 350px;
+    height: 100%;
     margin-top: 20px;
     background-color: black;
 }
@@ -69,12 +69,14 @@ customs[5] = {
   text: "Millet: Gluten-free and rich in nutrients like magnesium and phosphorus, millet is known for its digestive health benefits and ability to regulate blood sugar levels."
  } 
 
+
+const container = document.getElementById('container') 
 const title = document.createElement('h2')
 title.innerHTML = 'saludo' 
-document.body.appendChild(title)
+container.appendChild(title)
 const marquee = document.createElement('marquee')
 marquee.innerHTML = "hola, soy leonardosotelo89 de chile"
-document.body.appendChild( marquee)
+container.appendChild( marquee)
 
 function randomelement(){
   let random = parseInt(Math.random()*customs.length)
