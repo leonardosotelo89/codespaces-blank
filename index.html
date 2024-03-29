@@ -66,12 +66,12 @@ marquee.innerHTML = "hola, soy leonardosotelo89 de chile"
 document.body.appendChild( marquee)
 
 function randomelement(){
-  const random = parseInt(Math.random()*customs.length)
+  let random = parseInt(Math.random()*customs.length)
   return random
 }
 //console.log(randomelement()) 
 function setmarquee(){
-  const current = randomelement()
+  let current = randomelement()
   title.innerHTML = customs[current] ;
   marquee.innerHTML = customs[current].text ;
   console.log("current", current,"current.text", current.text,"customs[current]" , customs[current], "customs[current].text", customs[current].text) 
